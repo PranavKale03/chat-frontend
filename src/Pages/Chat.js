@@ -21,7 +21,7 @@ const Chat = () => {
   const messageListRef = useRef(null);
 
   useEffect(() => {
-    const socket = io("http://localhost:4242/");
+    const socket = io("https://chat-feature.onrender.com/");
     setSocket(socket);
 
     async function fetchRooms() {
@@ -29,7 +29,7 @@ const Chat = () => {
       const userId = "64dcd39fd9b954bc0e365499";
       setUserId(userId);
       setUserName("aryan");
-      fetch("http://localhost:4242/api" + `/community/search`, {
+      fetch("https://chat-feature.onrender.com/api" + `/community/search`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
